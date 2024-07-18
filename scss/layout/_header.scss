@@ -1,0 +1,173 @@
+@use '../utils/variable' as vars;
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 9em;
+    z-index: 1000;
+    color: vars.$white;
+    transition: background-color 0.4s;
+
+    &__inner {
+        position: relative;
+        height: 100%;
+    }
+
+    &__logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 2.6em;
+
+        &__img {
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+
+    &__wrapper {
+        height: 100%;
+    }
+
+    &__toggle {
+        width: 1.8em;
+        height: 1.53em;
+        margin: 0.2em;
+        background: url("../images/icon-hamburger.svg") no-repeat center center / contain;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: background-image 0.2s, width 0.2s, height 0.2s;
+        cursor: pointer;
+    }
+
+    &__nav {
+        display: none;
+        opacity: 0;
+
+        &__item {
+            display: inline-block;
+            font-weight: vars.$font-regular;
+            font-size: 1.375em;
+            margin-left: 1.5em;
+            text-transform: lowercase;
+            letter-spacing: -1px;
+        }
+    }
+
+    & + .nav-bg {
+        display: none;
+        opacity: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 900;
+        width: 100%;
+        height: 100%;
+        background: rgba(vars.$black, 0.6);
+    }
+
+    &.is-open {
+        background-color: vars.$white;
+        color: vars.$black;
+
+        .header__logo {
+            opacity: 0;
+        }
+
+        .header__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header__toggle {
+            position: static;
+            transform: none;
+            flex-shrink: 0;
+            width: 1.375em;
+            height: 1.375em;
+            background-image: url("../images/icon-close.svg");
+        }
+
+        .header__nav {
+            display: block;
+            animation: fadeIn 0.4s 0.05s alternate forwards;
+        }
+
+        & + .nav-bg {
+            display: block;
+            animation: fadeIn 0.4s 0.05s alternate forwards;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        width: 58.3%;
+        padding-top: 3em;
+
+        &__inner.inner-box {
+            width: 85%;
+            display: flex;
+            align-items: center;
+        }
+
+        &__logo {
+            position: static;
+            transform: none;
+        }
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        &__toggle {
+            display: none;
+        }
+
+        &__nav {
+            display: block;
+            opacity: 1;
+
+            &__list {
+                margin-left: 3em;
+            }
+
+            &__item {
+                margin-left: 1.75em;
+                font-weight: vars.$font-light;
+                letter-spacing: 0;
+
+                &__link {
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: -0.5em;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 0;
+                        height: 2px;
+                        background-color: vars.$white;
+                        transition: width 0.4s;
+                    }
+
+                    &:hover:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

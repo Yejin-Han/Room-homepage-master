@@ -1,0 +1,35 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+html {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    text-size-adjust: none;
+}
+body, h1, h2, h3, h4, p, ul, li, img, picture {
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    list-style: none;
+}
+a, a:focus, a:active, a:visited {
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
+}
+img, picture {
+    border: 0 none;
+    vertical-align: top;
+    max-width: 100%;
+    -webkit-user-drag: none;
+    user-select: none; -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none;
+}
+button {
+    display: inline-block;
+    background: transparent;
+    border: 0 none;
+}
+:target {
+    scroll-margin-block: 5ex;
+}

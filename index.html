@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Room homepage</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner inner-box">
+        <h1 class="header__logo"><img src="images/logo.svg" alt="room" class="header__logo__img"></h1>
+        <div class="header__wrapper">
+          <button type="button" class="header__toggle text--hidden">메뉴</button>
+          <nav class="header__nav">
+            <ul class="header__nav__list">
+              <li class="header__nav__item">
+                <a href="javascript:;" class="header__nav__item__link">Home</a>
+              </li>
+              <li class="header__nav__item">
+                <a href="javascript:;" class="header__nav__item__link">Shop</a>
+              </li>
+              <li class="header__nav__item">
+                <a href="javascript:;" class="header__nav__item__link">About</a>
+              </li>
+              <li class="header__nav__item">
+                <a href="javascript:;" class="header__nav__item__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="nav-bg"></div>
+    <main>
+      <section class="section-hero">
+        <div class="section-hero__wrapper wrap1">
+          <div class="swiper swiper-image">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide1">
+                <picture>
+                  <source srcset="images/desktop-image-hero-1.jpg" media="(min-width: 768px)">
+                  <img src="images/mobile-image-hero-1.jpg" alt="image-hero1">
+                </picture>
+              </div>
+              <div class="swiper-slide slide2">
+                <picture>
+                  <source srcset="images/desktop-image-hero-2.jpg" media="(min-width: 768px)">
+                  <img src="images/mobile-image-hero-2.jpg" alt="image-hero2">
+                </picture>
+              </div>
+              <div class="swiper-slide slide3">
+                <picture>
+                  <source srcset="images/desktop-image-hero-3.jpg" media="(min-width: 768px)">
+                  <img src="images/mobile-image-hero-3.jpg" alt="image-hero3">
+                </picture>
+              </div>
+            </div>
+            <div class="swiper-button-prev swiper-button"></div>
+            <div class="swiper-button-next swiper-button"></div>
+          </div>
+        </div>
+        <div class="section-hero__wrapper wrap2">
+          <div class="swiper swiper-content">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide1">
+                <div class="slide__inner inner-box">
+                  <h2 class="slide__title">Discover innovative ways to decorate</h2>
+                  <p class="slide__text text--gray">
+                    We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.
+                  </p>
+                  <a href="javascript:;" class="slide__link">Shop now</a>
+                </div>
+              </div>
+              <div class="swiper-slide slide2">
+                <div class="slide__inner inner-box">
+                  <h2 class="slide__title">We are available all across the globe</h2>
+                  <p class="slide__text text--gray">
+                    With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.
+                  </p>
+                  <a href="javascript:;" class="slide__link">Shop now</a>
+                </div>
+              </div>
+              <div class="swiper-slide slide3">
+                <div class="slide__inner inner-box">
+                  <h2 class="slide__title">Manufactured with the best materials</h2>
+                  <p class="slide__text text--gray">
+                    Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.
+                  </p>
+                  <a href="javascript:;" class="slide__link">Shop now</a>
+                </div>
+              </div>
+              <div class="swiper-slide slide4">
+                <div class="slide__inner inner-box">
+                  <h2 class="slide__title">About our furniture</h2>
+                  <p class="slide__text text--gray">
+                    Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.
+                  </p>
+                  <a href="javascript:;" class="slide__link">Shop now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-about">
+        <div class="section-about__img img-wrap1">
+          <img src="images/image-about-dark.jpg" alt="image-about-dark">
+        </div>
+        <div class="section-about__cont">
+          <div class="section-about__cont__inner inner-box">
+            <h3 class="section-about__cont__title">About our furniture</h3>
+            <p class="section-about__cont__text text--gray">Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.</p>
+          </div>
+        </div>
+        <div class="section-about__img img-wrap2">
+          <img src="images/image-about-light.jpg" alt="image-about-light">
+        </div>
+      </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

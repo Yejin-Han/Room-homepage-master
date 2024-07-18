@@ -1,0 +1,25 @@
+.section-hero {
+    .wrap2 {
+        padding: 5em 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-hero {
+        height: 66.625%;
+        flex-shrink: 0;
+        display: flex;
+
+        .wrap1 {
+            position: relative;
+            width: 58.3%;
+        }
+
+        .wrap2 {
+            width: 41.7%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
